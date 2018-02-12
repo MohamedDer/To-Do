@@ -1,0 +1,871 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03078C4F25ECCB974B0C7AB1863378E1 /* Pods-To-Do-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D999E142D8300F8A03B04806A077204E /* Pods-To-Do-dummy.m */; };
+		3BB8F67B2933CEB2195B051F564DC5C5 /* Pods-To-DoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4F25114B595A607C363461E5A38550 /* Pods-To-DoUITests-dummy.m */; };
+		3E3746F4046FCDB43FE645462B4CF970 /* Pods-To-DoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7096AA81DDD57DC75D5994BCBE199 /* Pods-To-DoTests-dummy.m */; };
+		4B5DD6F3073C1258D6B659CA39B72261 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5E7E0B70C0D1CCD0AC694A99E8324ECD /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FEAA874747BCCC04976063D5BF90A /* DLRadioButton-dummy.m */; };
+		67B3623E2CFFC4087F14B9D4F14DC00E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6EEC0D5CC457BA1277084F011D3CA376 /* Pods-To-Do-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 291B7D65CD6B754B7FEABB7A61E4DEDE /* Pods-To-Do-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84116DD709725E60919846D7B1AF714B /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F5B2BF039E9C8322611A20336871FEF /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F2D8EC348F59816CFDEA65538E3E532 /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E222E0956143D0FC952C90599CDF5BFF /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92897FED8D0FE55122E8089248B009F8 /* Pods-To-DoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEC78492BD63434533B0B002984EB78 /* Pods-To-DoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A86423863895825E47B41E5874190070 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B6988E28381FCC5D04082DD3969BD03F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EF2F59EEA3194DFCFB39352F4DA16D76 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7905713990636B6D12F4F9FC028F8990 /* DLRadioButton.m */; };
+		FD7B8CB628781CA5387108BB795F7004 /* Pods-To-DoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87EA1E728ABCDA5B7157F11FA0A4FC63 /* Pods-To-DoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57D8D587CDCD9576C7E78DBA65682B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6A77E2753C279F67F70C5C21D6FAE15;
+			remoteInfo = DLRadioButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07D621D9B395141B65D353E5013C355E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F5B2BF039E9C8322611A20336871FEF /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
+		12DA06C21E6EFA6A5BF719B646B5E74B /* Pods-To-Do-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To-Do-resources.sh"; sourceTree = "<group>"; };
+		13146AFB376738737C2B8B31FA87C22F /* Pods-To-DoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To-DoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1534236A9BC070D4C4F05A2018CF5473 /* Pods-To-DoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To-DoTests.release.xcconfig"; sourceTree = "<group>"; };
+		17912D13E50989F2AE32E3AD2EFF950B /* Pods-To-DoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To-DoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1E1DF7DD3EE73388F6DF98E99E307D7C /* Pods-To-DoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To-DoUITests-frameworks.sh"; sourceTree = "<group>"; };
+		226610E5CEACF2124039D5602E8A21C2 /* Pods-To-DoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To-DoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		26ED74F79E268CCD9F3D52009BD3B7A2 /* Pods-To-DoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To-DoTests-frameworks.sh"; sourceTree = "<group>"; };
+		291B7D65CD6B754B7FEABB7A61E4DEDE /* Pods-To-Do-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-To-Do-umbrella.h"; sourceTree = "<group>"; };
+		2C1464F26D128D507AAEE3A410BF34DD /* Pods_To_DoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_To_DoUITests.framework; path = "Pods-To-DoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3190F4CAA679F148B65893599BD66930 /* Pods-To-DoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To-DoUITests-resources.sh"; sourceTree = "<group>"; };
+		3B871A839765B5C32C36A652654A1046 /* Pods-To-Do-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To-Do-acknowledgements.markdown"; sourceTree = "<group>"; };
+		445B810E2F928FE9EB5C7E62728A167C /* Pods_To_Do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_To_Do.framework; path = "Pods-To-Do.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		632A33D7DCF787966C156E5846132C36 /* Pods-To-DoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To-DoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6DB8A4BDDDB5F04FE48B8E92DD1D3D4C /* Pods-To-Do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To-Do.release.xcconfig"; sourceTree = "<group>"; };
+		70BF1A46BFB413DACEE2C5016D07B0AD /* DLRadioButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.xcconfig; sourceTree = "<group>"; };
+		70F7096AA81DDD57DC75D5994BCBE199 /* Pods-To-DoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To-DoTests-dummy.m"; sourceTree = "<group>"; };
+		7905713990636B6D12F4F9FC028F8990 /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
+		7E7CB094CBF58FEE8CD1B342120DA098 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		802CF4DDBC680D113131420A46D87BD6 /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
+		827A9FC087B16374C80204A06EDA2D4D /* Pods-To-DoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-To-DoUITests.modulemap"; sourceTree = "<group>"; };
+		85ED49C9EB7A85CF74F0C4EEAD89F522 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DLRadioButton.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A048787161A71B836664192FEBE714 /* Pods-To-DoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To-DoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		87EA1E728ABCDA5B7157F11FA0A4FC63 /* Pods-To-DoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-To-DoUITests-umbrella.h"; sourceTree = "<group>"; };
+		9233FCCBF6510D8705DD717C160C970C /* Pods-To-DoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To-DoTests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C0FEAA874747BCCC04976063D5BF90A /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
+		9E912126EDA339725EBB992B4FF2BE05 /* Pods-To-DoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To-DoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A10AECC63646ADA2FB621C0EA3B8D887 /* Pods-To-Do-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To-Do-frameworks.sh"; sourceTree = "<group>"; };
+		A1310AF73D02D2C85BACFF663E1B0330 /* Pods-To-DoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To-DoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A7B4E87578D327DCFB26A4F3E918F11D /* Pods-To-DoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-To-DoTests.modulemap"; sourceTree = "<group>"; };
+		A8C9A728E2C8D992244A512249A79E59 /* Pods_To_DoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_To_DoTests.framework; path = "Pods-To-DoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29D0AAB8F6D5F8159D06D8A6DF95C24 /* Pods-To-Do.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-To-Do.modulemap"; sourceTree = "<group>"; };
+		B4D5460160DA674163EDB17C80134A71 /* Pods-To-Do-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To-Do-acknowledgements.plist"; sourceTree = "<group>"; };
+		B66EF3B4BABCB94C7096BC943B76D364 /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
+		BFEC78492BD63434533B0B002984EB78 /* Pods-To-DoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-To-DoTests-umbrella.h"; sourceTree = "<group>"; };
+		CB8C679ECEE1343F9047B71E0B3E86EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D999E142D8300F8A03B04806A077204E /* Pods-To-Do-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To-Do-dummy.m"; sourceTree = "<group>"; };
+		E1062BC358F893795DAF9BC02135981A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E222E0956143D0FC952C90599CDF5BFF /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
+		F77CB3EA21C4CC1D59A62F09C7BB3720 /* Pods-To-Do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To-Do.debug.xcconfig"; sourceTree = "<group>"; };
+		FE4F25114B595A607C363461E5A38550 /* Pods-To-DoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To-DoUITests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AA3C140871A9DF2F70288E01E245549 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5DD6F3073C1258D6B659CA39B72261 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A324E81F33CA8363E22E0C427CBC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6988E28381FCC5D04082DD3969BD03F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6B638A62A899993DC5CABFC6180CD75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B3623E2CFFC4087F14B9D4F14DC00E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96855EFE304FCB5105B4E2FC1C1B431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A86423863895825E47B41E5874190070 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13C7D74698E8E476948480C53BB1CAA4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				802CF4DDBC680D113131420A46D87BD6 /* DLRadioButton.modulemap */,
+				70BF1A46BFB413DACEE2C5016D07B0AD /* DLRadioButton.xcconfig */,
+				9C0FEAA874747BCCC04976063D5BF90A /* DLRadioButton-dummy.m */,
+				B66EF3B4BABCB94C7096BC943B76D364 /* DLRadioButton-prefix.pch */,
+				0F5B2BF039E9C8322611A20336871FEF /* DLRadioButton-umbrella.h */,
+				07D621D9B395141B65D353E5013C355E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DLRadioButton";
+			sourceTree = "<group>";
+		};
+		1F40F843E08C7DA7790E3AB331C404B4 /* Pods-To-Do */ = {
+			isa = PBXGroup;
+			children = (
+				7E7CB094CBF58FEE8CD1B342120DA098 /* Info.plist */,
+				B29D0AAB8F6D5F8159D06D8A6DF95C24 /* Pods-To-Do.modulemap */,
+				3B871A839765B5C32C36A652654A1046 /* Pods-To-Do-acknowledgements.markdown */,
+				B4D5460160DA674163EDB17C80134A71 /* Pods-To-Do-acknowledgements.plist */,
+				D999E142D8300F8A03B04806A077204E /* Pods-To-Do-dummy.m */,
+				A10AECC63646ADA2FB621C0EA3B8D887 /* Pods-To-Do-frameworks.sh */,
+				12DA06C21E6EFA6A5BF719B646B5E74B /* Pods-To-Do-resources.sh */,
+				291B7D65CD6B754B7FEABB7A61E4DEDE /* Pods-To-Do-umbrella.h */,
+				F77CB3EA21C4CC1D59A62F09C7BB3720 /* Pods-To-Do.debug.xcconfig */,
+				6DB8A4BDDDB5F04FE48B8E92DD1D3D4C /* Pods-To-Do.release.xcconfig */,
+			);
+			name = "Pods-To-Do";
+			path = "Target Support Files/Pods-To-Do";
+			sourceTree = "<group>";
+		};
+		30FF8F0F2745F4599EEB0793B0B65990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85ED49C9EB7A85CF74F0C4EEAD89F522 /* DLRadioButton.framework */,
+				445B810E2F928FE9EB5C7E62728A167C /* Pods_To_Do.framework */,
+				A8C9A728E2C8D992244A512249A79E59 /* Pods_To_DoTests.framework */,
+				2C1464F26D128D507AAEE3A410BF34DD /* Pods_To_DoUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		703227E263757D7F8B262EDB0B8F8B13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6D782F948F41752A6D997862C12D7FC /* DLRadioButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				703227E263757D7F8B262EDB0B8F8B13 /* Pods */,
+				30FF8F0F2745F4599EEB0793B0B65990 /* Products */,
+				9EBF05D94635A2E840AFB5857AF4201C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9D5B8EDD9353033D9E898DDBE8337C48 /* Pods-To-DoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1062BC358F893795DAF9BC02135981A /* Info.plist */,
+				A7B4E87578D327DCFB26A4F3E918F11D /* Pods-To-DoTests.modulemap */,
+				A1310AF73D02D2C85BACFF663E1B0330 /* Pods-To-DoTests-acknowledgements.markdown */,
+				17912D13E50989F2AE32E3AD2EFF950B /* Pods-To-DoTests-acknowledgements.plist */,
+				70F7096AA81DDD57DC75D5994BCBE199 /* Pods-To-DoTests-dummy.m */,
+				26ED74F79E268CCD9F3D52009BD3B7A2 /* Pods-To-DoTests-frameworks.sh */,
+				9233FCCBF6510D8705DD717C160C970C /* Pods-To-DoTests-resources.sh */,
+				BFEC78492BD63434533B0B002984EB78 /* Pods-To-DoTests-umbrella.h */,
+				632A33D7DCF787966C156E5846132C36 /* Pods-To-DoTests.debug.xcconfig */,
+				1534236A9BC070D4C4F05A2018CF5473 /* Pods-To-DoTests.release.xcconfig */,
+			);
+			name = "Pods-To-DoTests";
+			path = "Target Support Files/Pods-To-DoTests";
+			sourceTree = "<group>";
+		};
+		9EBF05D94635A2E840AFB5857AF4201C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F40F843E08C7DA7790E3AB331C404B4 /* Pods-To-Do */,
+				9D5B8EDD9353033D9E898DDBE8337C48 /* Pods-To-DoTests */,
+				B4A4BF7D6B4E9B7FF185D001A15D4C82 /* Pods-To-DoUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B4A4BF7D6B4E9B7FF185D001A15D4C82 /* Pods-To-DoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB8C679ECEE1343F9047B71E0B3E86EC /* Info.plist */,
+				827A9FC087B16374C80204A06EDA2D4D /* Pods-To-DoUITests.modulemap */,
+				9E912126EDA339725EBB992B4FF2BE05 /* Pods-To-DoUITests-acknowledgements.markdown */,
+				13146AFB376738737C2B8B31FA87C22F /* Pods-To-DoUITests-acknowledgements.plist */,
+				FE4F25114B595A607C363461E5A38550 /* Pods-To-DoUITests-dummy.m */,
+				1E1DF7DD3EE73388F6DF98E99E307D7C /* Pods-To-DoUITests-frameworks.sh */,
+				3190F4CAA679F148B65893599BD66930 /* Pods-To-DoUITests-resources.sh */,
+				87EA1E728ABCDA5B7157F11FA0A4FC63 /* Pods-To-DoUITests-umbrella.h */,
+				87A048787161A71B836664192FEBE714 /* Pods-To-DoUITests.debug.xcconfig */,
+				226610E5CEACF2124039D5602E8A21C2 /* Pods-To-DoUITests.release.xcconfig */,
+			);
+			name = "Pods-To-DoUITests";
+			path = "Target Support Files/Pods-To-DoUITests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E6D782F948F41752A6D997862C12D7FC /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				E222E0956143D0FC952C90599CDF5BFF /* DLRadioButton.h */,
+				7905713990636B6D12F4F9FC028F8990 /* DLRadioButton.m */,
+				13C7D74698E8E476948480C53BB1CAA4 /* Support Files */,
+			);
+			name = DLRadioButton;
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		220E61F93FBE49E9C3EBBEE5E9331C18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84116DD709725E60919846D7B1AF714B /* DLRadioButton-umbrella.h in Headers */,
+				8F2D8EC348F59816CFDEA65538E3E532 /* DLRadioButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		432EC05484BD8679271EE4F961D95A51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EEC0D5CC457BA1277084F011D3CA376 /* Pods-To-Do-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		667A10C9D891C933C91BB1DEC1DE8CCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7B8CB628781CA5387108BB795F7004 /* Pods-To-DoUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BF8D2B516CD138C952E817C32382BC9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92897FED8D0FE55122E8089248B009F8 /* Pods-To-DoTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		382580BED2FBB755D744A47C736D9D30 /* Pods-To-DoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F3A2DB8E0F04F1E4E52ACC77A9B216 /* Build configuration list for PBXNativeTarget "Pods-To-DoUITests" */;
+			buildPhases = (
+				B9F0CFE57FB33221FFF64263DAFE75A5 /* Sources */,
+				B6B638A62A899993DC5CABFC6180CD75 /* Frameworks */,
+				667A10C9D891C933C91BB1DEC1DE8CCE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-To-DoUITests";
+			productName = "Pods-To-DoUITests";
+			productReference = 2C1464F26D128D507AAEE3A410BF34DD /* Pods_To_DoUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		77A8A4E1EAF4AF4C7FB34C7A2C1804A4 /* Pods-To-Do */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AE0208BE29C41E3BB4DB5C35C9E8EA5 /* Build configuration list for PBXNativeTarget "Pods-To-Do" */;
+			buildPhases = (
+				07A67DCE8099706E3E6345672CD53ACD /* Sources */,
+				D96855EFE304FCB5105B4E2FC1C1B431 /* Frameworks */,
+				432EC05484BD8679271EE4F961D95A51 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A04F08CE65B8A40825423F7E8F2E22D5 /* PBXTargetDependency */,
+			);
+			name = "Pods-To-Do";
+			productName = "Pods-To-Do";
+			productReference = 445B810E2F928FE9EB5C7E62728A167C /* Pods_To_Do.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79F3E34A070E70C2F754386D5AC781DC /* Pods-To-DoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984A9C991909CCF3176CBF07BA508176 /* Build configuration list for PBXNativeTarget "Pods-To-DoTests" */;
+			buildPhases = (
+				F2EF4C0226881EA79F0FE4EF6FCBE300 /* Sources */,
+				2AA3C140871A9DF2F70288E01E245549 /* Frameworks */,
+				8BF8D2B516CD138C952E817C32382BC9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-To-DoTests";
+			productName = "Pods-To-DoTests";
+			productReference = A8C9A728E2C8D992244A512249A79E59 /* Pods_To_DoTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6A77E2753C279F67F70C5C21D6FAE15 /* DLRadioButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 118FCC60066EF1D7DD17E50B82C12AA4 /* Build configuration list for PBXNativeTarget "DLRadioButton" */;
+			buildPhases = (
+				8F67A4B4F56469850BF8A099A6E12AE8 /* Sources */,
+				A2A324E81F33CA8363E22E0C427CBC97 /* Frameworks */,
+				220E61F93FBE49E9C3EBBEE5E9331C18 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLRadioButton;
+			productName = DLRadioButton;
+			productReference = 85ED49C9EB7A85CF74F0C4EEAD89F522 /* DLRadioButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 30FF8F0F2745F4599EEB0793B0B65990 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6A77E2753C279F67F70C5C21D6FAE15 /* DLRadioButton */,
+				77A8A4E1EAF4AF4C7FB34C7A2C1804A4 /* Pods-To-Do */,
+				79F3E34A070E70C2F754386D5AC781DC /* Pods-To-DoTests */,
+				382580BED2FBB755D744A47C736D9D30 /* Pods-To-DoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07A67DCE8099706E3E6345672CD53ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03078C4F25ECCB974B0C7AB1863378E1 /* Pods-To-Do-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F67A4B4F56469850BF8A099A6E12AE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E7E0B70C0D1CCD0AC694A99E8324ECD /* DLRadioButton-dummy.m in Sources */,
+				EF2F59EEA3194DFCFB39352F4DA16D76 /* DLRadioButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F0CFE57FB33221FFF64263DAFE75A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB8F67B2933CEB2195B051F564DC5C5 /* Pods-To-DoUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2EF4C0226881EA79F0FE4EF6FCBE300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3746F4046FCDB43FE645462B4CF970 /* Pods-To-DoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A04F08CE65B8A40825423F7E8F2E22D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DLRadioButton;
+			target = F6A77E2753C279F67F70C5C21D6FAE15 /* DLRadioButton */;
+			targetProxy = 57D8D587CDCD9576C7E78DBA65682B7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0131CA5434B45C231A20BE8CC0175F9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 632A33D7DCF787966C156E5846132C36 /* Pods-To-DoTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-To-DoTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To-DoTests/Pods-To-DoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_DoTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07E757414FAD7872FE62A9A40F6C0E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BF1A46BFB413DACEE2C5016D07B0AD /* DLRadioButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		269E893B33B61B7651B6455C1A4D1A85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77CB3EA21C4CC1D59A62F09C7BB3720 /* Pods-To-Do.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-To-Do/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To-Do/Pods-To-Do.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_Do;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7121FE84FF1350580C8604824BC9D282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB8A4BDDDB5F04FE48B8E92DD1D3D4C /* Pods-To-Do.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-To-Do/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To-Do/Pods-To-Do.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_Do;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A312D8843FA73BA1D67E4D8D064611CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A048787161A71B836664192FEBE714 /* Pods-To-DoUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-To-DoUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To-DoUITests/Pods-To-DoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_DoUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B67275E35C1513FAC7FEB5BA46CEEAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BF1A46BFB413DACEE2C5016D07B0AD /* DLRadioButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA33F186435244FD0FD5B7325332656C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E3451402938449180B9547544FE22C48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 226610E5CEACF2124039D5602E8A21C2 /* Pods-To-DoUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-To-DoUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To-DoUITests/Pods-To-DoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_DoUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E43A9DFBC53B3EB57DC26BEE707A699D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1534236A9BC070D4C4F05A2018CF5473 /* Pods-To-DoTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-To-DoTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To-DoTests/Pods-To-DoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_DoTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02F3A2DB8E0F04F1E4E52ACC77A9B216 /* Build configuration list for PBXNativeTarget "Pods-To-DoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A312D8843FA73BA1D67E4D8D064611CA /* Debug */,
+				E3451402938449180B9547544FE22C48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AE0208BE29C41E3BB4DB5C35C9E8EA5 /* Build configuration list for PBXNativeTarget "Pods-To-Do" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				269E893B33B61B7651B6455C1A4D1A85 /* Debug */,
+				7121FE84FF1350580C8604824BC9D282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		118FCC60066EF1D7DD17E50B82C12AA4 /* Build configuration list for PBXNativeTarget "DLRadioButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E757414FAD7872FE62A9A40F6C0E9B /* Debug */,
+				B67275E35C1513FAC7FEB5BA46CEEAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323A24856F1A4871A780301AF5C02A2A /* Debug */,
+				CA33F186435244FD0FD5B7325332656C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984A9C991909CCF3176CBF07BA508176 /* Build configuration list for PBXNativeTarget "Pods-To-DoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0131CA5434B45C231A20BE8CC0175F9F /* Debug */,
+				E43A9DFBC53B3EB57DC26BEE707A699D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
