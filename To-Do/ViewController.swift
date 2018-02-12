@@ -14,34 +14,50 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     let itemTwo = Item(item: "my two item", isDone: true)
     let itemThree = Item(item: "my three item", isDone: true)
     let itemFour = Item(item: "my four item", isDone: false)
+    var items: [[Item]]!
 
-    var items = [Item]()
-    
+    let sections = ["Doing", "Done"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        items = [itemOne, itemTwo, itemThree, itemFour]
+        items = [[itemOne,itemTwo, itemThree], [itemFour]]
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
+    }
+    
+  
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items[section].count
+
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as  UITableViewCell
-        cell.textLabel?.text = items[indexPath.row].item
-        if items[indexPath.row].isDone == false {cell.accessoryType = .none}
+//        let indexPathforSection = IndexPath(row: indexPath.row, section: 0)
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.section][indexPath.row].item
+        if items[indexPath.section][indexPath.row].isDone == false {cell.accessoryType = .none}
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
+        print(" indexpath \(indexPath)")
         if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{ tableView.cellForRow(at: indexPath)?.accessoryType = .none
         }else{
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-            print("check cell in row \(indexPath)")
+            
         }
     }
     
@@ -49,7 +65,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         if editingStyle == .delete {
             
             // remove the item from the data model
-            items.remove(at: indexPath.row)
+            items[indexPath[0]].remove(at: indexPath.row)
             
             // delete the table view row
             tableView.deleteRows(at: [indexPath], with: .fade)
