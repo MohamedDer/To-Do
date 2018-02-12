@@ -56,16 +56,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
     }
     
-    
-    
-    
-    
-    
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
 
-
+}
 }
 
