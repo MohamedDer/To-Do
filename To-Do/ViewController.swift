@@ -21,8 +21,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         items = [itemOne, itemTwo, itemThree, itemFour]
-
-        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,14 +38,29 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark
-        {            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-            print("none cell in row \(indexPath)")
-}        else
-{           tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{ tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        }else{
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
             print("check cell in row \(indexPath)")
-
-}    }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            // remove the item from the data model
+            items.remove(at: indexPath.row)
+            
+            // delete the table view row
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+    }
+    
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
