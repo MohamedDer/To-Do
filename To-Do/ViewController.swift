@@ -44,8 +44,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
         cell.textLabel?.text = items[indexPath.section][indexPath.row].item
-        if items[indexPath.section][indexPath.row].isDone == true {cell.accessoryType = .checkmark}
-        else{cell.accessoryType = .none}
+        if items[indexPath.section][indexPath.row].isDone == true {
+            cell.accessoryType = .checkmark
+            cell.textLabel?.textColor = #colorLiteral(red: 0.06581701013, green: 0.1067036318, blue: 1, alpha: 1)
+        }
+        else{
+            cell.accessoryType = .none
+            cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)  }
         return cell
         
     }
