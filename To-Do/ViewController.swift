@@ -6,9 +6,14 @@
 
 
 import UIKit
-import DLRadioButton
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+
+
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource ,addItemProtocol {
+  
+    
+    @IBOutlet weak var mytableview: UITableView!
+    
     
     let itemOne = Item(item: "my 1 item", isDone: true)
     let itemTwo = Item(item: "my 2 item", isDone: true)
@@ -17,11 +22,38 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var items: [[Item]]!
     let sections = ["Doing", "Done"]
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "addItemSegue" {
+            
+            let navVC = segue.destination as? UINavigationController
+            
+            let additemVC = navVC?.viewControllers.first as! addItemViewController
+            
+            
+            additemVC.delegate = self
+            
+        }
+    }
+    
+    func newItemToAdd(string: String) {
+        items[0].append(Item(item: string, isDone: false))
+        mytableview.reloadData()
+        print("ha item li aytzad \(string)")
+
+    }
+    
+    
+    @IBAction func btnAddItem(_ sender: Any) {
+        performSegue(withIdentifier: "addItemSegue", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         items = addItems(itemsArray: [itemOne,itemTwo,itemThree,itemFour])
+        
     }
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count

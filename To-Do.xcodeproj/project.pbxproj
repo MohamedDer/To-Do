@@ -16,6 +16,7 @@
 		63371217201F40DF007E09E3 /* To_DoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63371216201F40DF007E09E3 /* To_DoTests.swift */; };
 		63371222201F40DF007E09E3 /* To_DoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63371221201F40DF007E09E3 /* To_DoUITests.swift */; };
 		63B054B92031EA90002CA1EF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B054B82031EA90002CA1EF /* Item.swift */; };
+		63DCDF882032F971002B6BF3 /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DCDF872032F971002B6BF3 /* addItemViewController.swift */; };
 		88F8144DDF94035543D441D6 /* Pods_To_Do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DC38B6DE3A460A0187ADF4 /* Pods_To_Do.framework */; };
 		F979BF6AA2005EEBA1039C93 /* Pods_To_DoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A43A0E2E43D7A3AC9C7751F /* Pods_To_DoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		63371221201F40DF007E09E3 /* To_DoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_DoUITests.swift; sourceTree = "<group>"; };
 		63371223201F40DF007E09E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B054B82031EA90002CA1EF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		63DCDF872032F971002B6BF3 /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		83DC38B6DE3A460A0187ADF4 /* Pods_To_Do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA8C3BDD0408EBC582124DA /* Pods-To-Do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do.release.xcconfig"; path = "Pods/Target Support Files/Pods-To-Do/Pods-To-Do.release.xcconfig"; sourceTree = "<group>"; };
 		9D6E9F5DE21A5B778CAB9BC7 /* Pods-To-DoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-DoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To-DoUITests/Pods-To-DoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				63371201201F40DF007E09E3 /* AppDelegate.swift */,
 				63371203201F40DF007E09E3 /* ViewController.swift */,
+				63DCDF872032F971002B6BF3 /* addItemViewController.swift */,
 				63371205201F40DF007E09E3 /* Main.storyboard */,
 				63371208201F40DF007E09E3 /* Assets.xcassets */,
 				6337120A201F40DF007E09E3 /* LaunchScreen.storyboard */,
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63371204201F40DF007E09E3 /* ViewController.swift in Sources */,
+				63DCDF882032F971002B6BF3 /* addItemViewController.swift in Sources */,
 				63B054B92031EA90002CA1EF /* Item.swift in Sources */,
 				63371202201F40DF007E09E3 /* AppDelegate.swift in Sources */,
 			);
