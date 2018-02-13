@@ -10,18 +10,17 @@ import DLRadioButton
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    let itemOne = Item(item: "my one item", isDone: true)
-    let itemTwo = Item(item: "my two item", isDone: true)
-    let itemThree = Item(item: "my three item", isDone: true)
-    let itemFour = Item(item: "my four item", isDone: false)
+    let itemOne = Item(item: "my 1 item", isDone: true)
+    let itemTwo = Item(item: "my 2 item", isDone: true)
+    let itemThree = Item(item: "my 3 item", isDone: false)
+    let itemFour = Item(item: "my 4 item", isDone: false)
     var items: [[Item]]!
-
     let sections = ["Doing", "Done"]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        items = [[itemOne,itemTwo, itemThree], [itemFour]]
+        items = addItems(itemsArray: [itemOne,itemTwo,itemThree,itemFour])
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,21 +42,32 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-//        let indexPathforSection = IndexPath(row: indexPath.row, section: 0)
-
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
         cell.textLabel?.text = items[indexPath.section][indexPath.row].item
-        if items[indexPath.section][indexPath.row].isDone == false {cell.accessoryType = .none}
+        if items[indexPath.section][indexPath.row].isDone == true {cell.accessoryType = .checkmark}
+        else{cell.accessoryType = .none}
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        print(" indexpath \(indexPath)")
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{ tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        }else{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        if items[indexPath[0]][indexPath.row].isDone == true{
+            items[indexPath[0]][indexPath.row].isDone = false
+            items[0].append(items[1][indexPath.row])
+            items[1].remove(at: indexPath.row)
             
+            //tableView.cellForRow(at: indexPath)?.accessoryType = .none
+            tableView.reloadData()
+
+            
+        }else{
+            items[indexPath[0]][indexPath.row].isDone = true
+            items[1].append(items[0][indexPath.row])
+            items[0].remove(at: indexPath.row)
+            
+            //tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            tableView.reloadData()
+
         }
     }
     
@@ -74,6 +84,19 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     }
 
+    func addItems(itemsArray: [Item]) -> [[Item]]{
+        var items: [[Item]]!
+        items = [[],[]]
+        for i in itemsArray{
+            if i.isDone == false {
+                items[0].append(i)
+            }else{
+                items[1].append(i)
+            }
+        }
+        print(items)
+        return items
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
