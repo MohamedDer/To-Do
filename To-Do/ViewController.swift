@@ -10,23 +10,20 @@ import FirebaseDatabase
 import PromiseKit
 import SwiftyJSON
 
-
-
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource ,addItemProtocol {
 
 
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var mytableview: UITableView!
 
-var itemsRaw: [Item] = []
-var items: [[Item]]!
-let sections = ["In progress", "Done"]
-var ref: DatabaseReference!
-
+    var itemsRaw: [Item] = [] // contains items loaded from the firebase db
+    var items: [[Item]]! // contains 2 arrays : first one for in progress items and the second on for the done items
+    let sections = ["In progress", "Done"]
+    var ref: DatabaseReference!
 
 
 override func viewDidLoad() {
-super.viewDidLoad()
+    super.viewDidLoad()
 
     items = [[],[]]
     mytableview.layer.cornerRadius = 10
@@ -39,11 +36,9 @@ super.viewDidLoad()
         // getting all the nodes from the "tasks" branch
         var iterator = 0
         while ( iterator < allItemsNode.count){
-
             let itemID = allItemsNode.allKeys[iterator] as! String
             let itemNode = allItemsNode.value(forKey: itemID) as! NSDictionary
             // extracting node data and converting to Item
-
             let itemText = itemNode.value(forKey: "itemText")! as! String
             let itemIsDone = itemNode.value(forKey: "isDone")! as! String
             self.itemsRaw.append(Item(item: itemText, isDone: self.toBool(string: itemIsDone)!,id: itemID))
@@ -53,21 +48,21 @@ super.viewDidLoad()
 
         }.then{ _ -> Void in 
             self.items = self.addItems(itemsArray: self.itemsRaw)
+            // updating UI with loaded data
             self.mytableview.reloadData()
             self.indicator.stopAnimating()
         }.catch{ _ -> Void in
-            print("error from the catch scope")
+            print("error from the catch scope ")
+            // I ll do a propmt  mssg here 
+            self.indicator.stopAnimating()
     }
-    
-
-
 }
     
     func getItemsFromDB () -> Promise<NSDictionary> {
         return Promise { fulfill, reject in
-            
             ref = Database.database().reference()
             ref.child("tasks").observeSingleEvent(of: .value, with: { (snapshot) in
+                
                 guard let allItemsDictionnary = snapshot.value as? NSDictionary else {
                     print("ne data/task node")
                     reject(NSError(domain: "No tasks node found !", code: 100, userInfo: nil))
@@ -77,10 +72,7 @@ super.viewDidLoad()
             })
             }
     }
-    
-    
-    
-    
+   
     
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if  segue.identifier == "addItemSegue" {
@@ -147,15 +139,19 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
     // toggle items if selected
     if items[indexPath[0]][indexPath.row].isDone == true{
+        //updating firebase db
+        ref.child("tasks").child(items[indexPath[0]][indexPath.row].id).child("isDone").setValue("false")
+        //updating local data
         items[indexPath[0]][indexPath.row].isDone = false
         items[0].append(items[1][indexPath.row])
         items[1].remove(at: indexPath.row)
-
     }else{
+        //updating firebase db
+        ref.child("tasks").child(items[indexPath[0]][indexPath.row].id).child("isDone").setValue("true")
+        //updating local data
         items[indexPath[0]][indexPath.row].isDone = true
         items[1].append(items[0][indexPath.row])
         items[0].remove(at: indexPath.row)
-
     }
     // update UI with animation
     UIView.transition(with: tableView,
@@ -166,12 +162,12 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
 
 func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
-
-    // remove the item from the data model
-    items[indexPath[0]].remove(at: indexPath.row)
-
-    // delete the table view row
-    tableView.deleteRows(at: [indexPath], with: .fade)
+        //updating firebase db
+        ref.child("tasks").child(items[indexPath[0]][indexPath.row].id).setValue(nil)
+        // remove the item from the data model
+        items[indexPath[0]].remove(at: indexPath.row)
+        // delete the table view row
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
 }
