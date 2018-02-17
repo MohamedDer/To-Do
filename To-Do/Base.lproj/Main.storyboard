@@ -19,19 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QZt-v4-Dxg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="5" y="69" width="365" height="593"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="603" id="p8h-eD-aNb"/>
-                                    <constraint firstAttribute="width" constant="375" id="q5J-Tm-JVe"/>
-                                </constraints>
-                                <color key="sectionIndexBackgroundColor" red="0.92752185880000004" green="0.92752185880000004" blue="0.92752185880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" id="byP-X9-Ezg">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="365" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="byP-X9-Ezg" id="WqG-yO-CNq">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -41,13 +36,23 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Le7-ia-8jg"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SbO-Jz-wcE">
+                                <rect key="frame" x="5" y="323" width="365" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rYR-L1-F4U"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QZt-v4-Dxg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IgN-oy-3Ip"/>
-                            <constraint firstItem="QZt-v4-Dxg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XsD-TX-djV"/>
-                            <constraint firstItem="QZt-v4-Dxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rBE-di-7wg"/>
-                            <constraint firstItem="QZt-v4-Dxg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s7t-3M-Rgn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SbO-Jz-wcE" secondAttribute="bottom" constant="324" id="0vw-iO-hyi"/>
+                            <constraint firstItem="SbO-Jz-wcE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="259" id="1yP-t2-veo"/>
+                            <constraint firstItem="SbO-Jz-wcE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="5st-VJ-hgA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SbO-Jz-wcE" secondAttribute="trailing" constant="5" id="7NB-EK-hBV"/>
+                            <constraint firstItem="QZt-v4-Dxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="AD3-pE-AjT"/>
+                            <constraint firstItem="QZt-v4-Dxg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="P9D-gx-N6J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZt-v4-Dxg" secondAttribute="trailing" constant="5" id="gi9-BH-Xa7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QZt-v4-Dxg" secondAttribute="bottom" constant="5" id="jAz-Yx-Dka"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -60,6 +65,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicator" destination="SbO-Jz-wcE" id="uVi-de-gLj"/>
                         <outlet property="mytableview" destination="QZt-v4-Dxg" id="hyL-Ir-Rvp"/>
                     </connections>
                 </viewController>
@@ -105,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lQ-V5-hmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429.5999999999999" y="241.52923538230885"/>
+            <point key="canvasLocation" x="2106" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7oh-gV-okE">
@@ -123,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjC-0O-z8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="117"/>
+            <point key="canvasLocation" x="-375" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gYm-Em-GIg">
@@ -141,7 +147,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9P-0v-5cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="-514"/>
+            <point key="canvasLocation" x="1313" y="117"/>
         </scene>
     </scenes>
 </document>

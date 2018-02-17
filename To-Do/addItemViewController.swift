@@ -9,33 +9,36 @@
 import UIKit
 
 protocol addItemProtocol {
-    func newItemToAdd(string: String)
+func newItemToAdd(string: String)
 }
 
 class addItemViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
-    
-    var delegate: addItemProtocol?
+@IBOutlet weak var textView: UITextView!
 
-    @IBAction func dismissAddItemView(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func addThisItem(_ sender: Any) {
-            delegate?.newItemToAdd(string: textView.text)
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        textView.layer.borderWidth = 2
-        textView.layer.borderColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        textView.layer.cornerRadius = 5
+var delegate: addItemProtocol?
 
-       
-        
-    }
+@IBAction func dismissAddItemView(_ sender: Any) {
+    dismiss(animated: true, completion: nil)
+}
+
+@IBAction func addThisItem(_ sender: Any) {
+    if !textView.text.isEmpty
+        {delegate?.newItemToAdd(string: textView.text)
+        dismiss(animated: true, completion: nil)}
+    else
+       { print("text khawi, i should add a prompt msg here")}
+}
+
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    textView.layer.borderWidth = 2
+    textView.layer.borderColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+    textView.layer.cornerRadius = 5
+
+   
     
+}
+
 }

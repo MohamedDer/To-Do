@@ -7,7 +7,12 @@ target 'To-Do' do
 
   # Pods for To-Do
 
-  pod 'DLRadioButton', '~> 1.4'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod "PromiseKit", "~> 4.4"
+  pod 'SwiftyJSON'
+
+
 
   target 'To-DoTests' do
     inherit! :search_paths
