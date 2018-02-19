@@ -53,7 +53,7 @@ override func viewDidLoad() {
             self.indicator.stopAnimating()
         }.catch{ _ -> Void in
             print("error from the catch scope ")
-            // I ll do a propmt  mssg here 
+            // I ll do a propmt  mssg here
             self.indicator.stopAnimating()
     }
 }

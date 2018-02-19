@@ -27,7 +27,7 @@ var delegate: addItemProtocol?
         {delegate?.newItemToAdd(string: textView.text)
         dismiss(animated: true, completion: nil)}
     else
-       { print("text khawi, i should add a prompt msg here")}
+       { print("empty text view , i should add a prompt msg here")}
 }
 
 
@@ -37,6 +37,7 @@ override func viewDidLoad() {
     textView.layer.borderColor =  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     textView.layer.cornerRadius = 5
 
+    textView.becomeFirstResponder()
    
     
 }
