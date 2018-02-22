@@ -26,7 +26,21 @@ init(item: String, isDone: Bool) {
         self.isDone = isDone
         self.id = id
     }
+ 
     
+    static func toBool(string: String) -> Bool? {
+        switch string {
+        case "True", "true", "yes", "1":
+            return true
+        case "False", "false", "no", "0":
+            return false
+        default:
+            return nil
+        }
+    }
+
+    
+
 }
 
 
@@ -40,6 +54,8 @@ func randomString(length: Int = 5) -> String {
     }
     return randomString
 }
+
+
 
 
 

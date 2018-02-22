@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		089231C1E70EB92B100442A3 /* Pods_To_DoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCA37BDBCEE6717E29F855C /* Pods_To_DoTests.framework */; };
+		630E6A1F203EEB6300CDBD52 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E6A1E203EEB6300CDBD52 /* FirebaseAPI.swift */; };
 		63371202201F40DF007E09E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63371201201F40DF007E09E3 /* AppDelegate.swift */; };
 		63371204201F40DF007E09E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63371203201F40DF007E09E3 /* ViewController.swift */; };
 		63371207201F40DF007E09E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63371205201F40DF007E09E3 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		10F64103AE03780BAAB7815D /* Pods-To-DoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-DoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To-DoTests/Pods-To-DoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3863D0BBF89E1C826398B275 /* Pods-To-Do.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To-Do/Pods-To-Do.debug.xcconfig"; sourceTree = "<group>"; };
 		4781D74C1E5398376B44588B /* Pods-To-DoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-DoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-To-DoUITests/Pods-To-DoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		630E6A1E203EEB6300CDBD52 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		631E3B972034577000E6B250 /* RKPieChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RKPieChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		633711FE201F40DF007E09E3 /* To-Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63371201201F40DF007E09E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		6337121D201F40DF007E09E3 /* To-DoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-DoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63371221201F40DF007E09E3 /* To_DoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_DoUITests.swift; sourceTree = "<group>"; };
 		63371223201F40DF007E09E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63A14DCE203AE9A6006C1FD9 /* To-Do.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "To-Do.entitlements"; sourceTree = "<group>"; };
 		63B054B82031EA90002CA1EF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		63CBAF6F203486B7006F2A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63CBAF71203486C1006F2A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -98,6 +101,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630E6A1B203EEA8F00CDBD52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63B054B82031EA90002CA1EF /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		630E6A1C203EEAA100CDBD52 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63371203201F40DF007E09E3 /* ViewController.swift */,
+				63DCDF872032F971002B6BF3 /* addItemViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		630E6A1D203EEB4A00CDBD52 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				630E6A1E203EEB6300CDBD52 /* FirebaseAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		633711F5201F40DF007E09E3 = {
 			isa = PBXGroup;
 			children = (
@@ -124,15 +152,16 @@
 		63371200201F40DF007E09E3 /* To-Do */ = {
 			isa = PBXGroup;
 			children = (
+				630E6A1D203EEB4A00CDBD52 /* Network */,
+				630E6A1C203EEAA100CDBD52 /* Controllers */,
+				630E6A1B203EEA8F00CDBD52 /* Models */,
+				63A14DCE203AE9A6006C1FD9 /* To-Do.entitlements */,
 				63CBAF71203486C1006F2A40 /* GoogleService-Info.plist */,
 				63371201201F40DF007E09E3 /* AppDelegate.swift */,
-				63371203201F40DF007E09E3 /* ViewController.swift */,
-				63DCDF872032F971002B6BF3 /* addItemViewController.swift */,
 				63371205201F40DF007E09E3 /* Main.storyboard */,
 				63371208201F40DF007E09E3 /* Assets.xcassets */,
 				6337120A201F40DF007E09E3 /* LaunchScreen.storyboard */,
 				6337120D201F40DF007E09E3 /* Info.plist */,
-				63B054B82031EA90002CA1EF /* Item.swift */,
 			);
 			path = "To-Do";
 			sourceTree = "<group>";
@@ -257,6 +286,14 @@
 					633711FD201F40DF007E09E3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					63371211201F40DF007E09E3 = {
 						CreatedOnToolsVersion = 9.2;
@@ -485,6 +522,7 @@
 				63371204201F40DF007E09E3 /* ViewController.swift in Sources */,
 				63DCDF882032F971002B6BF3 /* addItemViewController.swift in Sources */,
 				63B054B92031EA90002CA1EF /* Item.swift in Sources */,
+				630E6A1F203EEB6300CDBD52 /* FirebaseAPI.swift in Sources */,
 				63371202201F40DF007E09E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,9 +690,10 @@
 			baseConfigurationReference = 3863D0BBF89E1C826398B275 /* Pods-To-Do.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "To-Do/To-Do.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S7P43UR5T5;
 				INFOPLIST_FILE = "To-Do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "medder.To-Do";
@@ -670,9 +709,10 @@
 			baseConfigurationReference = 8AA8C3BDD0408EBC582124DA /* Pods-To-Do.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "To-Do/To-Do.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S7P43UR5T5;
 				INFOPLIST_FILE = "To-Do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "medder.To-Do";

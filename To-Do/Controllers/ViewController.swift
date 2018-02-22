@@ -22,16 +22,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var ref: DatabaseReference!
 
 
+
 override func viewDidLoad() {
     super.viewDidLoad()
-
+    Database.database().isPersistenceEnabled = true
     items = [[],[]]
     mytableview.layer.cornerRadius = 10
     indicator?.hidesWhenStopped = true
     indicator?.startAnimating()
+    
+    ref = Database.database().reference()
 
-    getItemsFromDB().then{ allItemsNode -> Void in
-        print("heeere are we baby \(allItemsNode.description)")
+    FirebaeAPI.getItemsFromDB().then{ allItemsNode -> Void in
         
         // getting all the nodes from the "tasks" branch
         var iterator = 0
@@ -41,12 +43,13 @@ override func viewDidLoad() {
             // extracting node data and converting to Item
             let itemText = itemNode.value(forKey: "itemText")! as! String
             let itemIsDone = itemNode.value(forKey: "isDone")! as! String
-            self.itemsRaw.append(Item(item: itemText, isDone: self.toBool(string: itemIsDone)!,id: itemID))
+            self.itemsRaw.append(Item(item: itemText, isDone: Item.toBool(string: itemIsDone)!,id: itemID))
             print("item : \(self.itemsRaw[iterator].itemText) added in  raw")
             iterator += 1
         }
-
-        }.then{ _ -> Void in 
+        //Item.toBool(string: itemIsDone)!
+        
+        }.then{ _ -> Void in
             self.items = self.addItems(itemsArray: self.itemsRaw)
             // updating UI with loaded data
             self.mytableview.reloadData()
@@ -56,22 +59,10 @@ override func viewDidLoad() {
             // I ll do a propmt  mssg here
             self.indicator.stopAnimating()
     }
+
+
 }
     
-    func getItemsFromDB () -> Promise<NSDictionary> {
-        return Promise { fulfill, reject in
-            ref = Database.database().reference()
-            ref.child("tasks").observeSingleEvent(of: .value, with: { (snapshot) in
-                
-                guard let allItemsDictionnary = snapshot.value as? NSDictionary else {
-                    print("ne data/task node")
-                    reject(NSError(domain: "No tasks node found !", code: 100, userInfo: nil))
-                    return
-                }
-                fulfill(allItemsDictionnary)
-            })
-            }
-    }
    
     
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -125,12 +116,12 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     cell.textLabel?.text = items[indexPath.section][indexPath.row].itemText
     if items[indexPath.section][indexPath.row].isDone == true {
         cell.accessoryType = .checkmark
-        cell.textLabel?.font = UIFont(name: "Oriya Sangam MN", size: 16)
+        cell.textLabel?.font = UIFont(name: "Oriya Sangam MN", size: 15)
         cell.textLabel?.textColor = #colorLiteral(red: 0.06581701013, green: 0.1067036318, blue: 1, alpha: 1)
     }
     else{
         cell.accessoryType = .none
-        cell.textLabel?.font = UIFont(name: "Oriya Sangam MN", size: 18)
+        cell.textLabel?.font = UIFont(name: "Oriya Sangam MN", size: 17)
         cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)  }
         return cell
 
@@ -186,16 +177,6 @@ func addItems(itemsArray: [Item]) -> [[Item]]{
     return items
 }
 
-func toBool(string: String) -> Bool? {
-    switch string {
-    case "True", "true", "yes", "1":
-    return true
-    case "False", "false", "no", "0":
-    return false
-    default:
-    return nil
-    }
-}
 
 
 }

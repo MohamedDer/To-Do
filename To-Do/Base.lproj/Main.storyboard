@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--To-Do-->
         <scene sceneID="tne-QT-ifu">
@@ -43,16 +48,18 @@
                                 </constraints>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SbO-Jz-wcE" secondAttribute="bottom" constant="324" id="0vw-iO-hyi"/>
                             <constraint firstItem="SbO-Jz-wcE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="259" id="1yP-t2-veo"/>
                             <constraint firstItem="SbO-Jz-wcE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="5st-VJ-hgA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SbO-Jz-wcE" secondAttribute="trailing" constant="5" id="7NB-EK-hBV"/>
                             <constraint firstItem="QZt-v4-Dxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="AD3-pE-AjT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SbO-Jz-wcE" secondAttribute="trailing" constant="5" id="LtL-bz-7jv"/>
                             <constraint firstItem="QZt-v4-Dxg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="P9D-gx-N6J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZt-v4-Dxg" secondAttribute="trailing" constant="5" id="gi9-BH-Xa7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QZt-v4-Dxg" secondAttribute="bottom" constant="5" id="jAz-Yx-Dka"/>
+                            <constraint firstItem="SbO-Jz-wcE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zFI-t4-xLv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+            <point key="canvasLocation" x="-78" y="116"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="TNR-WP-crp">
@@ -118,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lQ-V5-hmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="117"/>
+            <point key="canvasLocation" x="1417" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7oh-gV-okE">
@@ -136,7 +143,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjC-0O-z8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="117"/>
+            <point key="canvasLocation" x="-828" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gYm-Em-GIg">
@@ -154,7 +161,38 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9P-0v-5cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="117"/>
+            <point key="canvasLocation" x="668" y="116"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="hN7-Oa-woa">
+            <objects>
+                <viewController title="Login" id="QVR-dC-Weo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Asg-49-Z6E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToDoDo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXa-VU-18q">
+                                <rect key="frame" x="121" y="112" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleicon" translatesAutoresizingMaskIntoConstraints="NO" id="H11-yT-WpC">
+                                <rect key="frame" x="153" y="346" width="68" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eCY-G0-PPe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUP-ab-aw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1911.5" y="115.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="googleicon" width="150" height="150"/>
+    </resources>
 </document>
