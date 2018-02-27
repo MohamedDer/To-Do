@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirebaseDatabase
+//import Firebase
 
 
 class Item{
@@ -39,6 +41,33 @@ init(item: String, isDone: Bool) {
         }
     }
 
+    
+    func addItemToDB() -> Void {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("tasks").child(self.id).child("itemText").setValue(self.itemText)
+        ref.child("tasks").child(self.id).child("isDone").setValue(self.isDone.description)
+    }
+    
+    func deleteItemFromDB() -> Void {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("tasks").child(self.id).setValue(nil)
+    
+    }
+    
+    func switchStateForItem(isDoneInt: Int) -> Void {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        if isDoneInt == 1 {
+            ref.child("tasks").child(self.id).child("isDone").setValue("false")
+        } else {
+            ref.child("tasks").child(self.id).child("isDone").setValue("true")
+        }
+        
+        
+    
+    }
     
 
 }

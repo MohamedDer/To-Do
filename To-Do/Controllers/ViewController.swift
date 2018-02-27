@@ -35,7 +35,7 @@ override func viewDidLoad() {
 
     FirebaeAPI.getItemsFromDB().then{ allItemsNode -> Void in
         
-        // getting all the nodes from the "tasks" branch
+        // populating itemsRaw from the fetched "tasks" branch
         var iterator = 0
         while ( iterator < allItemsNode.count){
             let itemID = allItemsNode.allKeys[iterator] as! String
@@ -47,7 +47,6 @@ override func viewDidLoad() {
             print("item : \(self.itemsRaw[iterator].itemText) added in  raw")
             iterator += 1
         }
-        //Item.toBool(string: itemIsDone)!
         
         }.then{ _ -> Void in
             self.items = self.addItems(itemsArray: self.itemsRaw)
@@ -59,8 +58,6 @@ override func viewDidLoad() {
             // I ll do a propmt  mssg here
             self.indicator.stopAnimating()
     }
-
-
 }
     
    
@@ -76,12 +73,9 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 func newItemToAdd(string: String) {
     let itemToAdd = Item(item: string, isDone: false)
     items[0].append(itemToAdd)
-    ref.child("tasks").child(itemToAdd.id).child("itemText").setValue(itemToAdd.itemText)
-    ref.child("tasks").child(itemToAdd.id).child("isDone").setValue(itemToAdd.isDone.description)
+    itemToAdd.addItemToDB()
     mytableview.reloadData()
 }
-
-
 
 
 func numberOfSections(in tableView: UITableView) -> Int {
@@ -89,7 +83,6 @@ func numberOfSections(in tableView: UITableView) -> Int {
 }
 
 func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    //print( items[section].count)
     return sections[section]
 }
 
@@ -112,6 +105,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
 
+    // Custom apppearence for each type of items
     let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
     cell.textLabel?.text = items[indexPath.section][indexPath.row].itemText
     if items[indexPath.section][indexPath.row].isDone == true {
@@ -131,14 +125,14 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
     // toggle items if selected
     if items[indexPath[0]][indexPath.row].isDone == true{
         //updating firebase db
-        ref.child("tasks").child(items[indexPath[0]][indexPath.row].id).child("isDone").setValue("false")
+        items[indexPath[0]][indexPath.row].switchStateForItem(isDoneInt: 1)
         //updating local data
         items[indexPath[0]][indexPath.row].isDone = false
         items[0].append(items[1][indexPath.row])
         items[1].remove(at: indexPath.row)
     }else{
         //updating firebase db
-        ref.child("tasks").child(items[indexPath[0]][indexPath.row].id).child("isDone").setValue("true")
+        items[indexPath[0]][indexPath.row].switchStateForItem(isDoneInt: 0)
         //updating local data
         items[indexPath[0]][indexPath.row].isDone = true
         items[1].append(items[0][indexPath.row])
@@ -154,10 +148,10 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
 func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
         //updating firebase db
-        ref.child("tasks").child(items[indexPath[0]][indexPath.row].id).setValue(nil)
-        // remove the item from the data model
+        items[indexPath[0]][indexPath.row].deleteItemFromDB()
+        // remove the item from the local data
         items[indexPath[0]].remove(at: indexPath.row)
-        // delete the table view row
+        // delete the tableview row
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
