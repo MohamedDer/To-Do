@@ -88,23 +88,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-bo-WbT">
-                                <rect key="frame" x="16" y="165" width="343" height="172"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" hint="Add Items here" identifier="textField"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New To-Do Item :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvQ-0z-tfJ">
-                                <rect key="frame" x="27" y="107" width="151" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-YI-poR">
+                                <rect key="frame" x="10" y="100" width="355" height="111"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New To-Do Item :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvQ-0z-tfJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-bo-WbT">
+                                        <rect key="frame" x="0.0" y="36" width="700" height="75"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Add Items here" identifier="textField"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="4eN-Ht-Hsj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zhy-bo-WbT" secondAttribute="trailing" constant="10" id="7wE-H6-Hys"/>
+                                    <constraint firstAttribute="trailing" secondItem="zhy-bo-WbT" secondAttribute="trailing" constant="10" id="GXL-WU-uIB"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ekb-YI-poR" firstAttribute="leading" secondItem="yfs-4U-oz1" secondAttribute="leading" constant="10" id="CYW-LP-cSv"/>
+                            <constraint firstItem="ekb-YI-poR" firstAttribute="top" secondItem="0hl-eI-iOJ" secondAttribute="top" constant="100" id="Hhl-kd-ad5"/>
+                            <constraint firstItem="yfs-4U-oz1" firstAttribute="trailing" secondItem="ekb-YI-poR" secondAttribute="trailing" constant="10" id="tWi-kw-JKN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yfs-4U-oz1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="7F5-AV-Ymh">
