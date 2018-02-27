@@ -53,23 +53,13 @@ init(item: String, isDone: Bool) {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         ref.child("tasks").child(self.id).setValue(nil)
-    
     }
     
     func switchStateForItem(isDoneInt: Int) -> Void {
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        if isDoneInt == 1 {
-            ref.child("tasks").child(self.id).child("isDone").setValue("false")
-        } else {
-            ref.child("tasks").child(self.id).child("isDone").setValue("true")
-        }
-        
-        
-    
+        isDoneInt == 1 ? ref.child("tasks").child(self.id).child("isDone").setValue("false") : ref.child("tasks").child(self.id).child("isDone").setValue("true")
     }
-    
-
 }
 
 
