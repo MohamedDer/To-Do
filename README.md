@@ -24,6 +24,6 @@ Libraries & Frameworks
 
 Developed by
 ------
-Mohamed Derkaoui  -  medder12@gmail.com
+[Mohamed Derkaoui](www.read.cv/mderkaoui)
 
 The main purpose behind this project is to practice some iOS basics, so feel free to contribute. Your improvements/remarks are more than welcome. Yo!
